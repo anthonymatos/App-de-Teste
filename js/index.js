@@ -1,6 +1,6 @@
 /* SCRIPTS PRINCIPAIS DO TEMA */
 
-/* Preparação do App */
+/* PreparaÃ§Ã£o do App */
 var app = {
 
     // Inicializa o App
@@ -9,14 +9,14 @@ var app = {
         $(document).ready(app.config);
     },
 
-    // Carrega e aplica as configurações do App
+    // Carrega e aplica as configuraÃ§Ãµes do App
     config : function(){
         console.log(' - Configurando App...');
         // Configurando...
         app.run();
     },
 
-    // Carrega o App, preparando-o para rodar
+    // Executa o App
     run : function(){
         console.log(' - Executando App...');
         runApp();
@@ -27,34 +27,25 @@ var app = {
 function runApp(){
     console.log(' - Tratando eventos...');
 
-    // Monitorando o botão 'menu'
+    // Monitorando o botÃ£o 'menu'
     $(document).on('click', '#menu', toggleMenu);
 
     // Monitorando fundo do 'menu'
     $(document).on('click', '#menuModal', toggleMenu);
-
-    // Monitorando rotas (cliques em links)
-    // ATENÇÃO! A função de callback 'routing' depende de 'routing.js'
-    $(document).on('click', 'a', routing);
 }
 
-// Mostra / oculta menu principal
+// Mostra / oculta menu
 function toggleMenu(){
-    if($('nav').attr('class') == 'menuOn'){ // Se o menu está visível
-        $('#menu').removeClass('rotateBtn'); // Remove rotação do botão
-        $('nav').removeClass('menuOn'); // Desliza menu para fora da viewport
-        $('#menuModal').fadeOut('slow'); // Oculta o fundo do menu
-        setTimeout(function(){ // Dispara timer
-            $('#wrapMenu').hide(0); // Oculta menu
-        }, 700); // Após 700 milissegundos
-    } else { // Se o menu está oculto
-        $('#wrapMenu').show(0, function(){ // Mostra menu
-            $('#menu').addClass('rotateBtn'); // Aplica rotação no botão
-            $('#menuModal').fadeIn('slow'); // Exibir o fundo
-            $('nav').addClass('menuOn'); // Desliza menu para dentro da viewport 
-        });
+    if($('nav').attr('class') == 'menuOn'){ // Se o menu estÃ¡ visÃ­vel
+        $('#menu').removeClass('rotateBtn'); // Remove rotaÃ§Ã£o do botÃ£o
+        $('nav').removeClass('menuOn'); // Remove a classe que exibe o menu
+        $('#menuModal').fadeOut('fast'); // Oculta o fundo do menu
+    } else { // Se o menu estÃ¡ oculto
+        $('#menu').addClass('rotateBtn'); // Aplica rotaÃ§Ã£o no botÃ£o
+        $('#menuModal').fadeIn('fast'); // Exibir o fundo
+        $('nav').addClass('menuOn'); // Adicionando a classe que exibe o menu
     }
 }
 
-// Executa o App
+// Chama a aplicaÃ§Ã£o quando for carregada
 app.start();

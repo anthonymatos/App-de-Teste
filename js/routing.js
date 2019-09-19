@@ -4,7 +4,8 @@
 function routing(){
     
     console.log(' - Roteando...');
-
+    var href = $(this).attr('href');
+    console.log(href);
 
 
 

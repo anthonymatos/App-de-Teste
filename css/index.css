@@ -1,16 +1,16 @@
 /* FOLHAS DE ESTILO DO TEMA DO APP */
 
-/* Variáveis do tema */
+/* VariÃ¡veis do tema */
 :root {
-    /* Definição do tema */
-    --font-family-default: sans-serif; /* Família de fonte do App */
-    --font-size-default: 16px; /* Tamanho padrão da fonte do App */
+    /* DefiniÃ§Ã£o do tema */
+    --font-family-default: sans-serif; /* FamÃ­lia de fonte do App */
+    --font-size-default: 16px; /* Tamanho padrÃ£o da fonte do App */
     --body-background: url('../img/background01.jpg') repeat fixed; /* Fundo do body */
-    --link-color-default: steelblue; /* Cor padrão dos links */
-    --link-color-hover-dafault: orangered; /* Cor padrão dos links com hover/touch */
+    --link-color-default: steelblue; /* Cor padrÃ£o dos links */
+    --link-color-hover-dafault: orangered; /* Cor padrÃ£o dos links com hover/touch */
     --header-bg: #330033; /* Cor de fundo da barra superior */
     --header-font-color: #ffe6ff; /* Cor do texto da barra superior */
-    --header-logo-border: -1px -1px #ffe6ff, -1px 1px #ffe6ff, 1px -1px #ffe6ff, 1px 1px #ffe6ff; /* Borda do ícone */ 
+    --header-logo-border: -1px -1px #ffe6ff, -1px 1px #ffe6ff, 1px -1px #ffe6ff, 1px 1px #ffe6ff; /* Borda do Ã­cone */ 
     --nav-bg: #660066; /* Cor de fundo do menu */
     --nav-font-color: #ffefff; /* Cor dos textos dos links do menu */
 }
@@ -74,7 +74,7 @@ header a {
 header a:hover {
     color: var(--header-font-color);
 }
-.rotateBtn { /* Animação do botão do menu quando clicado */
+.rotateBtn { /* AnimaÃ§Ã£o do botÃ£o do menu quando clicado */
     transform: rotate(-270deg);
 }
 header h1 {
@@ -101,7 +101,7 @@ nav {
     top: 3.5rem;
     left: -300px;
     z-index: 100;
-    transition: .8s;
+    transition: .7s;
 }
 nav a {
     color: var(--nav-font-color);
@@ -133,7 +133,7 @@ nav hr {
     display: none;
 }
 
-/* Bloco de conteúdo */
+/* Bloco de conteÃºdo */
 main {
     margin-top: 3.5rem;
 }
